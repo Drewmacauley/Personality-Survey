@@ -1,16 +1,15 @@
 $(document).ready(function () {
   $("form#personality_survey_1").submit(function (event) {
     event.preventDefault();
-    $("#signs-response").show();
+    $("#personality").show();
     $("input:checkbox[name=work-stress]:checked").each(function () {
-      const workstressSympt = $(this).val();
-      $('#stress-response').append( + "<br>");
+      const workStress = $(this).val();
+      $('#personality').append(workStress + "<br>");
     });
-    $("#personality_survey_2").show();
+    $("#high-stress").show();
     $("input:checkbox[name=high-stress]:checked").each(function () {
-      const genstress = $(this).val();
-      $('#personality-response').append( + "<br>");
+      const highStress = $(this).val();
+      $('#high-stress').append(highStress + "<br>");
     });
-    $('#personality-survey').hide();
   });
 });
